@@ -1,15 +1,15 @@
 function getMaxLessThanK(n, k) {
-    let max = 0;
+  let max = 0;
 
-    for (let a = 1; a <= n; a++) {
-        for (let b = a + 1; b <= n; b++) {
-            let bw = (a & b);
+  for (let i = 1; i <= n; i++) {
+    for (let j = i + 1; j <= n; j++) {
+      let bw = i & j;
 
-            (bw < k && bw > max) && (max = bw);
-        }
+      bw < k && bw > max && (max = bw);
     }
- 
-    return max;
+  }
+
+  return max;
 }
 
-console.log(getMaxLessThanK(5,2));
+console.log(getMaxLessThanK(5, 2));
