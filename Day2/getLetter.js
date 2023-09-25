@@ -1,34 +1,26 @@
 function getLetter(s) {
-  let letter;
-
   switch (s[0]) {
-    case 'a' || 'e' || 'o' || 'i' || 'u':
-      letter = 'A';
-      break;
-
-    case 'b' || 'c' || 'd' || 'f' || 'g':
-      letter = 'B';
-      break;
-
-    case 'h' || 'j' || 'k' || 'l' || 'm':
-      letter = 'C';
-      break;
-
-    case 'z' ||
-      'n' ||
-      'p' ||
-      'q' ||
-      'r' ||
-      's' ||
-      't' ||
-      'v' ||
-      'w' ||
-      'x' ||
-      'y':
-      letter = 'D';
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      return "A";
+    case "b":
+    case "c":
+    case "d":
+    case "f":
+    case "g":
+      return "B";
+    case "h":
+    case "j":
+    case "k":
+    case "l":
+    case "m":
+      return "C";
+    default:
+      return "D";
   }
-
-  console.log(letter);
 }
 
-getLetter("zgb");
+console.log(getLetter2("jba"));
